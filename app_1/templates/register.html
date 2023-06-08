@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register page</title>
+
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Ismingizni kiriting" name="name">
+        <input type="email" placeholder="emailingizni kiriting" name="email">
+        <input type="password" placeholder="parolingizni yozing" name="password">
+        <input type="text" placeholder="telefon raqamingiz" name="number">
+        <input type="text"placeholder="qaysi davlatdansiz" name="country">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <a href="{% url 'home:login' %}" style="color: aqua;">Log-In</a>
+
+</body>
+</html>

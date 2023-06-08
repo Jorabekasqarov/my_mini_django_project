@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Price</title>
+    <h1 style="background-color:#037c66;border-radius: 40px;text-align:center;margin:auto;color:#16e331;font-family: sans-serif;padding:20px">Muxsimum price</h1>
+
+</head>
+<body style="background-color: #b0ffe3">
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nomi</th>
+            <th>modeli</th>
+            <th>rangi</th>
+            <th>narxi</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.phone.name }}</td>
+            <td>{{ product.color }}</td>
+            <td>{{ product.price}}$</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+{#        <h3 style="color: #048a23">{{ i.phone }}</h3>#}
+{#        <h3>{{ i.title }}</h3>#}
+{#        <h3>{{ i.memory }}</h3>#}
+{#        <h3>{{ i.price }}</h3>#}
+{#        <h3>{{ i.color }}</h3>#}
+
+
+
+</body>
+</html>
